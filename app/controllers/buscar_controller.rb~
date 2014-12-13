@@ -1,0 +1,7 @@
+class BuscarController < ApplicationController
+ 
+	def index
+	  @projects = Member.search(params[:search])
+	end
+
+end

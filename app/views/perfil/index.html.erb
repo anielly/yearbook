@@ -1,0 +1,14 @@
+<% if @usuario != nil %>
+	<div class="painel2">
+	
+		<p><%=image_tag(@membro.foto) %></p>
+		<h1><%= @membro.username %></h1>
+			
+
+		<p>Descrição: <%= @membro.descricao %></p>
+		<p>Email: <%= @membro.email %></p>
+		<p>Endereço: <%= @membro.endereco %></p>
+	</div>
+	<% else %>
+		<%= render :text => "Você precisa estar logado para visualizar está página!" %>
+<% end %>

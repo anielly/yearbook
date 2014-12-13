@@ -1,0 +1,10 @@
+class MuralController < ApplicationController
+	def index
+		if params[:search] == nil
+			@membros = Member.all
+		  else
+			@membros = Member.where(username = "%"+params[:search]+"%")
+			params[:search]
+		end
+	end
+end

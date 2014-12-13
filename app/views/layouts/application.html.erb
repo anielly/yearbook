@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Yearbook Tópicos Especiais em Computação</title>
+  <%= stylesheet_link_tag "scaffold" %>
+  <%= stylesheet_link_tag  "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body> 
+          <ul>    
+            <li><a href="http://0.0.0.0:3000/mural">Inicio</a></li>
+            <li><a href="http://0.0.0.0:3000/members/sign_up">Cadastrar</a></li>
+            <li><a href="http://0.0.0.0:3000/members/edit">Editar</a></li>
+            <li><%= link_to "Entrar", new_member_session_path, :method => :get %> </li> 
+            <li><%= link_to "Sair", destroy_member_session_path, :method => :delete %></li> 
+          </ul>     
+          <%= @page_title%>  
+          <div class="logo">
+            <img src="/images/logo.jpg" >
+          </div>
+          <div class="render">
+           <%= yield %>
+        </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+class PerfilController < ApplicationController
+  def index
+
+  	@usuario = current_member
+  	if (@usuario != nil)
+  		@membro = Member.find(params[:id])
+		render '/mural/index'
+  	end
+
+
+
+  end
+end

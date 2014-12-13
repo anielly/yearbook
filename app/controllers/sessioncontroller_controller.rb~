@@ -1,0 +1,6 @@
+class SessioncontrollerController < Devise::SessionsController
+  def create
+	super
+	session[:user_id] = 1;
+  end
+end

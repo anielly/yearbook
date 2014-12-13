@@ -1,0 +1,25 @@
+			<div class="logo2">
+			  <%= form_tag :method => 'get' do %>
+				  <%= text_field_tag :search, params[:search], :id => 'search_field' %>
+				  <%= submit_tag "Buscar", :name => nil %> 
+			  <% end %> 
+			</div>	
+
+		<div class="externa">	
+			<h1 > Bem vindo ao YearBook!</h1>
+			<p id="descricao">
+				Este é o Yearbook da disciplina de Tópicos Especiais em Computação do curso de Ciência da Computação,
+				oferecido pela Universidade Federal de Alfenas. <br />A disciplina dada à distância, e foi proposto o 
+				desenvolvimento do yearbook em Ruby on Rails para os alunos desenvolverem. Aqui está nosso Yearbook! 
+			</p>
+			<div class="painelExterno">
+				<% @membros.each do |membro| %>
+					<div class="painel">				
+							<h3><%= membro.username %></h3>
+								<%= sanitize membro.descricao %>
+							<%= link_to image_tag(membro.foto), {:controller => :perfil, :action => :index , :id => membro.id} %>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	

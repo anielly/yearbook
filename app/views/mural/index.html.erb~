@@ -1,0 +1,17 @@
+		<% form_tag projects_path, :method => 'get' do %>
+  			<p>
+    				<%= text_field_tag :search, params[:search] %>
+    				<%= submit_tag "Search", :name => nil %>
+  			</p>
+		<% end %>
+		<br/>
+		<% @membros.each do |membro| %>
+			<div class="painel">				
+					<h3><%= membro.username %></h3>
+					<div class="textoDescricao">
+						<%= sanitize membro.descricao %>
+					</div>
+					<%= link_to image_tag(membro.foto), {:controller => :perfil, :action => :index , :id => membro.id} %>
+			</div>
+
+		<% end %>
