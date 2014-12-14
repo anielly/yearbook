@@ -5,6 +5,8 @@ Yearbook::Application.routes.draw do
 
   get "perfil/index"
 
+  post "mural/index"
+
   devise_for :members
 
   resources :albums

@@ -1,4 +1,5 @@
 Yearbook::Application.routes.draw do
+
   get "buscar/index"
 
   get "sessioncontroller/create"
