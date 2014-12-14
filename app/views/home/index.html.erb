@@ -1,17 +1,16 @@
 <div class="painel2">
-<% if member_signed_in? %>
+	<% if member_signed_in? %>
 
-<h3>you have succesfully signed in</h3>
-<%= link_to "Sign Out", destroy_member_session_path, :method => :delete %>
+		<h3>you have succesfully signed in</h3>
+		<%= link_to "Sign Out", destroy_member_session_path, :method => :delete %>
 
-<% else %>
+	<% else %>
 
-<h1> Bem vindo ao YearBook</h1>
-	<p>Conecte-se a nosso Yearbook!<br/>
-	    Basta se cadastrar e conhecer mais sobre a Disciplina de Tópicos em Computação<br/> e sobre os cursandos.
-	</p>
-
-<% end %>
+		<h1> Bem vindo ao YearBook</h1>
+			<p>Conecte-se a nosso Yearbook!<br/>
+			    Basta se cadastrar e conhecer mais sobre a Disciplina de Tópicos em Computação<br/> e sobre os cursandos.
+			</p>
+	<% end %>
 </div>
 
 
