@@ -1,9 +1,9 @@
 Yearbook::Application.routes.draw do
-  get "buscar/index"
+  get 'buscar/index', to: 'buscar#index'
 
-  get "sessioncontroller/create"
+  get 'sessioncontroller/create', to: 'sessioncontroller#create'
 
-  get "perfil/index"
+  get 'perfil/index', to: 'perfil#index' 
 
   post "mural/index"
 
