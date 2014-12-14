@@ -1,12 +1,12 @@
 Yearbook::Application.routes.draw do
 
-  get "buscar/index"
+  get "buscar/index" 
 
   get "sessioncontroller/create"
 
   get "perfil/index"
 
-  post "mural/index"
+  post "mural" => "mural#index", as: :mural 
 
   devise_for :members
 
