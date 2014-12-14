@@ -6,7 +6,7 @@ Yearbook::Application.routes.draw do
 
   get "perfil/index"
 
-  post "mural" => "mural#index", as: :mural 
+  post "mural/index"
 
   devise_for :members
 
